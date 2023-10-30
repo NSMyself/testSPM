@@ -5,6 +5,9 @@ import SnapshotTesting
 final class testSPMTests: XCTestCase {
     func testExample() throws {
         let view = ContentView()
-        assertSnapshot(of: view, as: .image)
+            .frame(width: 200, height: 200)
+            .fixedSize(horizontal: true, vertical: true)
+
+        assertSnapshot(matching: view, as: .image)
     }
 }
